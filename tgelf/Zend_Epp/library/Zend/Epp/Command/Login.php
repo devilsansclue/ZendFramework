@@ -2,7 +2,7 @@
 
 class Zend_Epp_Command_Login extends Zend_Epp_Command
 {
-    protected $use_trid = false;
+    // protected $use_trid = false;
     protected $name = 'login';
 
     protected function initCommand($params)
