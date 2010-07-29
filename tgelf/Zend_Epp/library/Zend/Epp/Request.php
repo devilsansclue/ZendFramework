@@ -130,7 +130,7 @@ class Zend_Epp_Request
     protected function addEppNode($parent = null)
     {
         if ($parent === null) $parent = $this->doc;
-        $node = $parent->createElementNS('urn:ietf:params:xml:ns:epp-1.0', 'epp');
+        $node = $parent->createElementNS($this->registry->getNamespace(), 'epp');
         $node->setAttributeNS(
             'http://www.w3.org/2000/xmlns/',
             'xmlns:xsi',
@@ -139,8 +139,10 @@ class Zend_Epp_Request
         $schemaLocation = $node->setAttributeNS(
             'http://www.w3.org/2001/XMLSchema-instance',
             'schemaLocation',
-            'urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd'
+            $this->registry->getSchema()
         );
+
+
         $parent->appendChild($node);
         return $node;
     }

@@ -8,6 +8,20 @@ class Zend_Epp_Registry_Eurid extends Zend_Epp_Registry
      * @var string
      */
     protected $uri = 'epp://epp.registry.eu:33128';
+    
+    /**
+     * Registry namespace
+     *
+     * @var string
+     */
+    protected $ns = 'http://www.eurid.eu/xml/epp/epp-1.0';
+
+    /**
+     * Registry schema
+     *
+     * @var string
+     */
+    protected $schema = 'http://www.eurid.eu/xml/epp/epp-1.0 epp-1.0.xsd';
 
     /**
      * EPP registry name

@@ -51,6 +51,20 @@ abstract class Zend_Epp_Registry
     protected $supported_extensions = array();
 
     protected $loaded_extensions = array();
+    
+    /**
+     * Registry namespace
+     *
+     * @var string
+     */
+    protected $ns = 'urn:ietf:params:xml:ns:epp-1.0';
+
+    /**
+     * Registry schema
+     *
+     * @var string
+     */
+    protected $schema = 'urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd';
 
     /**
      * EPP Transport
@@ -67,6 +81,26 @@ abstract class Zend_Epp_Registry
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Registry namespace
+     *
+     * @var string
+     */
+    public function getNamespace()
+    {
+        return $this->ns;
+    }
+
+    /**
+     * Registry schema
+     *
+     * @var string
+     */
+    public function getSchema()
+    {
+        return $this->schema;
     }
 
     /**
@@ -162,10 +196,14 @@ abstract class Zend_Epp_Registry
             {
                 $this->hello();
                 // TODO: commands shall accept only one param, an epp_object
-                $this->login(array(
+                $this->connected = true;                
+                // $this->garbage();
+                
+                 $this->login(array(
                     'username' => $this->user,
                     'password' => $this->pass
                 ));
+                
             }
         }
 
@@ -200,9 +238,9 @@ abstract class Zend_Epp_Registry
     {
         $this->trid++;
         return sprintf(
-            '%s%14d%05d%05d',
+            '%s%014d%05d%05d',
             $this->tr_prefix,
-            date('YmdHis'),
+            date('YmdHis'), // TODO: Invalid INT
             posix_getpid(),
             $this->trid
         );
@@ -263,6 +301,10 @@ abstract class Zend_Epp_Registry
     // nope. sollen sich selbst registrieren
     public function callExtension($urn, $key, $xml)
     {
+        if (! isset($this->loaded_extensions[(string) $urn])) {
+            printf("WARNING: Could not call %s (%s)\n", $key, $urn);
+            return false;
+        }
         return $this->loaded_extensions[(string) $urn]->call($key, $xml);
     }
 
