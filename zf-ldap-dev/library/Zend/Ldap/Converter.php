@@ -157,6 +157,9 @@ class Zend_Ldap_Converter
             $date->setTimezone(new DateTimeZone('UTC'));
             $timezone = 'Z';
         }
+        if ( '+0000' === $timezone ) {
+            $timezone = 'Z';
+        }
         return $date->format('YmdHis') . $timezone;
     }
 
@@ -338,6 +341,9 @@ class Zend_Ldap_Converter
         }
 
         // Raw-Data is present, so lets create a DateTime-Object from it.
+        $offset = $time['offdir']
+                . str_pad($time['offsethours'],2,'0',STR_PAD_LEFT)
+                . str_pad($time['offsetminutes'],2,'0',STR_PAD_LEFT);
         $timestring = $time['year'] . '-'
                     . str_pad($time['month'], 2, '0', STR_PAD_LEFT) . '-'
                     . str_pad($time['day'], 2, '0', STR_PAD_LEFT) . ' '
@@ -350,8 +356,6 @@ class Zend_Ldap_Converter
         $date = new DateTime($timestring);
         if ($asUtc) {
             $date->setTimezone(new DateTimeZone('UTC'));
-        } else {
-            $date->setTimezone(new DateTimeZone(date_default_timezone_get()));
         }
         return $date;
     }

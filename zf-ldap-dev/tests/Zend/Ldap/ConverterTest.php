@@ -175,23 +175,28 @@ class Zend_Ldap_ConverterTest extends PHPUnit_Framework_TestCase
     /**
      * @dataProvider fromLdapDateTimeProvider
      */
-    public function testFromLdapDateTime($expected, $convert)
+    public function testFromLdapDateTime($expected, $convert, $utc)
     {
-        $this->assertEquals($expected, Zend_Ldap_Converter::fromLdapDatetime($convert));
+        if ( true === $utc ) {
+            $expected -> setTimezone(new DateTimeZone('UTC'));
+        }
+        $this->assertEquals($expected, Zend_Ldap_Converter::fromLdapDatetime($convert,$utc));
     }
 
     public function fromLdapDateTimeProvider ()
     {
         $tz = new DateTimeZone('UTC');
+        $tz = null;
         return array (
-                array(new DateTime('2010-12-24 08:00:23+0300',$tz),'20101224080023+0300'),
-                array(new DateTime('2010-12-24 08:00:23+0300',$tz),'20101224080023+03\'00\''),
-                array(new DateTime('2010-12-24 08:00:23+0000',$tz),'20101224080023'),
-                array(new DateTime('2010-12-24 08:00:00+0000',$tz),'201012240800'),
-                array(new DateTime('2010-12-24 08:00:00+0000',$tz),'2010122408'),
-                array(new DateTime('2010-12-24 00:00:00+0000',$tz),'20101224'),
-                array(new DateTime('2010-12-01 00:00:00+0000',$tz),'201012'),
-                array(new DateTime('2010-01-01 00:00:00+0000',$tz),'2010'),
+                array(new DateTime('2010-12-24 08:00:23+0300'),'20101224080023+0300', false),
+                array(new DateTime('2010-12-24 08:00:23+0300'),'20101224080023+03\'00\'', false),
+                array(new DateTime('2010-12-24 08:00:23+0000'),'20101224080023', false),
+                array(new DateTime('2010-12-24 08:00:00+0000'),'201012240800', false),
+                array(new DateTime('2010-12-24 08:00:00+0000'),'2010122408', false),
+                array(new DateTime('2010-12-24 00:00:00+0000'),'20101224', false),
+                array(new DateTime('2010-12-01 00:00:00+0000'),'201012', false),
+                array(new DateTime('2010-01-01 00:00:00+0000'),'2010', false),
+                array(new DateTime('2010-04-03 12:23:34+0000'), '20100403122334', true),
         );
     }
 
