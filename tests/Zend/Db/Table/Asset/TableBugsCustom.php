@@ -20,17 +20,6 @@
  * @version    $Id$
  */
 
-
-/**
- * require other test files needed, this will
- * ensure that Zend_Loader::loadClass is not called
- */
-
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
-
 /**
  * @category   Zend
  * @package    Zend_Db

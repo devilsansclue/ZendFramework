@@ -20,12 +20,9 @@
  * @version    $Id$
  */
 
-
 /**
  * @see Zend_Validate_Digits
  */
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
 
 /**
  * Mock file for testbed

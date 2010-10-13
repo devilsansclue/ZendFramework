@@ -20,9 +20,6 @@
  * @version    $Id$
  */
 
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * PHPUnit test case
  */

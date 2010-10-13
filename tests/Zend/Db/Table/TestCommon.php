@@ -20,7 +20,6 @@
  * @version    $Id$
  */
 
-
 /**
  * @see Zend_Db_Table_TestSetup
  */
@@ -32,9 +31,6 @@
 /**
  * @see Zend_Db_Table
  */
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 
 /**
  * @category   Zend

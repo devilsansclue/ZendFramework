@@ -21,10 +21,6 @@
  */
 
 /**
- * Test helper
- */
-
-/**
  * Zend_Date
  */
 

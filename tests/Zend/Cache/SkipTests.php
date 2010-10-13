@@ -21,13 +21,6 @@
  */
 
 /**
- * PHPUnit_Framework_TestCase
- */
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
-/**
  * @category   Zend
  * @package    Zend_Cache
  * @subpackage UnitTests

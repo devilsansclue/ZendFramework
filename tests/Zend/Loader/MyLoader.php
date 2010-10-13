@@ -24,8 +24,6 @@
  * @see Zend_Loader
  */
 
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * Static methods for loading classes and files.
  *

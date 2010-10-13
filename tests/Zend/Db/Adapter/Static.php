@@ -20,24 +20,13 @@
  * @version    $Id$
  */
 
-
-/**
- * PHPUnit_Util_Filter
- */
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
-
 /**
  * @see Zend_Db_Adapter_Abstract
  */
 
-
 /**
  * @see Zend_Db_Statement_Static
  */
-
 
 /**
  * Class for connecting to SQL databases and performing common operations.

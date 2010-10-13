@@ -20,11 +20,6 @@
  * @version    $Id$
  */
 
-
-/**
- * Test helper
- */
-
 /**
  * @see Zend_Loader
  */
@@ -32,18 +27,6 @@
 /**
  * @see Zend_Db
  */
-
-/**
- * PHPUnit_Framework_TestCase
- */
-
-/**
- * PHPUnit_Util_Filter
- */
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 
 /**
  * @category   Zend

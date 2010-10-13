@@ -19,13 +19,10 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
-
 /**
  * @see Zend_Db_TestUtil_Pdo_Oci
  * @see Zend_Db_TestUtil_Common
  */
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
 
 /**
  * @category   Zend

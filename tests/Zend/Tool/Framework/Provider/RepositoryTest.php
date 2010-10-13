@@ -21,10 +21,6 @@
  */
 
 /**
- * @see TestHelper.php
- */
-
-/**
  * @see Zend_Tool_Framework_Provider_Repository
  */
 

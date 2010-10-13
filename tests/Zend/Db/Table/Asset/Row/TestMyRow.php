@@ -20,12 +20,9 @@
  * @version    $Id$
  */
 
-
 /**
  * @see Zend_Db_Table_Row_Abstract
  */
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
 
 /**
  * @category   Zend

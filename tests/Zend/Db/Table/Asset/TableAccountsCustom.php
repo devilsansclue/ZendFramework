@@ -20,21 +20,9 @@
  * @version    $Id$
  */
 
-
 /**
  * @see Zend_Db_Table_Asset_TableAccounts
  */
-
-
-/**
- * require other test files needed, this will
- * ensure that Zend_Loader::loadClass is not called
- */
-
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 
 /**
  * @category   Zend

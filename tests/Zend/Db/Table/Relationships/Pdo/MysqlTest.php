@@ -21,16 +21,8 @@
  */
 
 /**
- * Test helper
- */
-
-/**
  * @see Zend_Db_Table_Relationships_TestCommon
  */
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 
 /**
  * @category   Zend

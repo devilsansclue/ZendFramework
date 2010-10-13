@@ -21,13 +21,6 @@
  */
 
 /**
- * @see TestHelper
- */
-
-/** requires */
-
-
-/**
  * @category   Zend
  * @package    Zend_CodeGenerator
  * @subpackage UnitTests

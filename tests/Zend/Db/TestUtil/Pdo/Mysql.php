@@ -24,8 +24,6 @@
  * @see Zend_Db_TestUtil_Mysqli
  */
 
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * @category   Zend
  * @package    Zend_Db

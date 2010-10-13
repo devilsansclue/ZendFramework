@@ -21,16 +21,7 @@
  */
 
 /**
- * TestHelper
- */
-require_once dirname(dirname(dirname(dirname(__FILE__)))) . DIRECTORY_SEPARATOR . 'TestHelper.php';
-
-/**
- * Zend_Pdf_Element_String
- */
-
-/**
- * PHPUnit Test Case
+ * @see Zend_Pdf_Element_String
  */
 
 /**

@@ -20,13 +20,6 @@
  * @version    $Id$
  */
 
-
-/**
- * Test helper
- */
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * @see Zend_Db
  */
@@ -38,7 +31,6 @@ PHPUnit_Util_Filter::addFileToFilter(__FILE__);
 /**
  * @see Zend_Db_Adapter_Static
  */
-
 
 /**
  * @category   Zend

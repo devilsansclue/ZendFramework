@@ -20,17 +20,6 @@
  * @version    $Id$
  */
 
-
-/**
- * PHPUnit_Framework_TestCase
- */
-
-/**
- * PHPUnit_Util_Filter
- */
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * @see Zend_Db_Table_Row_TestMockRow
  */

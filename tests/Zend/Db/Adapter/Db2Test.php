@@ -28,8 +28,6 @@
  * @see Zend_Db_Adapter_Db2
  */
 
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * @category   Zend
  * @package    Zend_Db

@@ -21,10 +21,6 @@
  */
 
 /**
- * @see TestHelper
- */
-
-/**
  * @see Zend_CodeGenerator_Php_Class
  */
 

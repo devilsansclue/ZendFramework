@@ -20,7 +20,6 @@
  * @version    $Id$
  */
 
-
 /**
  * Black box testing for Zend_Session
  *

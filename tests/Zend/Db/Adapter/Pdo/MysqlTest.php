@@ -20,19 +20,13 @@
  * @version    $Id$
  */
 
-
 /**
  * @see Zend_Db_Adapter_Pdo_TestCommon
  */
 
-
 /**
  * @see Zend_Db_Adapter_Pdo_Mysql
  */
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 
 /**
  * @category   Zend

@@ -21,12 +21,6 @@
  */
 
 /**
- * @see TestHelper.php
- */
-
-
-
-/**
  * @category   Zend
  * @package    Zend_Tool
  * @subpackage UnitTests

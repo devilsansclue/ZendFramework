@@ -20,8 +20,6 @@
  * @version    $Id $
  */
 
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * @see Zend_Db_Table_Row_TestMockRow
  */
@@ -38,8 +36,6 @@ PHPUnit_Util_Filter::addFileToFilter(__FILE__);
  */
 class Zend_Db_Table_Row_StaticTest extends PHPUnit_Framework_TestCase
 {
-
-
 
     public function testTableRowTransformColumnNotUsedInConstructor()
     {

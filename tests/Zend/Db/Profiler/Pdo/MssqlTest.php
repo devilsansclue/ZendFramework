@@ -24,9 +24,6 @@
  * @see Zend_Db_Profiler_TestCommon
  */
 
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
-
 /**
  * @category   Zend
  * @package    Zend_Db

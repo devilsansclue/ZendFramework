@@ -20,15 +20,6 @@
  * @version    $Id$
  */
 
-
-/**
- * PHPUnit_Util_Filter
- */
-
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
-
 /**
  * @see Zend_Db_Adapter_Static
  */

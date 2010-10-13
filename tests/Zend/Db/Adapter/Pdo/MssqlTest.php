@@ -28,8 +28,6 @@
  * @see Zend_Db_Adapter_Pdo_Mysql
  */
 
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
 /**
  * @category   Zend
  * @package    Zend_Db

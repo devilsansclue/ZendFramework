@@ -20,10 +20,6 @@
  * @version   $Id$
  */
 
-
-PHPUnit_Util_Filter::addFileToFilter(__FILE__);
-
-
 /**
  * Mock file for testbed
  *

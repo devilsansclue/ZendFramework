@@ -21,12 +21,6 @@
  */
 
 /**
- * @see TestHelper
- */
-
-/** requires */
-
-/**
  * @category   Zend
  * @package    Zend_Reflection
  * @subpackage UnitTests

@@ -21,14 +21,8 @@
  */
 
 /**
- * @see TestHelper.php
- */
-
-/**
  * @see Zend_Tool_Framework_Registry
  */
-
-/** Other Requirements */
 
 /**
  * @category   Zend
